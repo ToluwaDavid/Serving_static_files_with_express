@@ -13,6 +13,6 @@ var app = express();
 
 app.use(express.static(__dirname));
 
-app.listen(8080, () => {
-  console.log("Server is serving at port 8080");
+var server = app.listen(8080, () => {
+  console.log("Server is serving at port", server.address().port);
 });
